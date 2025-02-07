@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.software.zapp.controllers.ServiceCardController">
+   <children>
+      <Separator layoutY="136.0" prefHeight="3.0" prefWidth="488.0" />
+      <Button fx:id="restartButton" layoutX="414.0" layoutY="151.0" mnemonicParsing="false" onAction="#restartService" prefHeight="25.0" prefWidth="50.0" text="Restart" />
+      <Text layoutX="34.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: " wrappingWidth="50.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="serviceStatus" layoutX="78.0" layoutY="152.0" prefHeight="25.0" prefWidth="82.0" text="Stopped" />
+      <Circle fill="#eeeeee" layoutX="59.0" layoutY="59.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="serviceName" layoutX="119.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nginx Server" wrappingWidth="211.33673095703125">
+         <font>
+            <Font name="Arial Narrow Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="servicePort" fill="#545252" layoutX="119.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port: 80" wrappingWidth="122.13671875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="configureButton" layoutX="347.0" layoutY="42.0" mnemonicParsing="false" onAction="#openConfiguration" text="Config" />
+      <Button fx:id="logsButton" layoutX="414.0" layoutY="42.0" mnemonicParsing="false" onAction="#openLogs" prefHeight="25.0" prefWidth="50.0" text="Logs" />
+      <Button fx:id="startButton" layoutX="348.0" layoutY="151.0" mnemonicParsing="false" onAction="#startService" prefHeight="25.0" prefWidth="50.0" text="Start" />
+   </children>
+</AnchorPane>
