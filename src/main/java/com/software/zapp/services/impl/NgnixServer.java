@@ -8,7 +8,6 @@ import com.software.zapp.utils.ServiceStatus;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
-import java.net.ServerSocket;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -188,20 +187,9 @@ public class NgnixServer extends ExternalProcessService {
         return documentRoot;
     }
 
+
     public void setDocumentRootPath(String documentRoot) {
         this.documentRoot = documentRoot;
-    }
-
-    public static void main(String[] args) {
-        NgnixServer ngnixServer = new NgnixServer(4444, "C:/Users/moham/OneDrive/Desktop/zapptest");
-        try {
-            System.out.println("Nginx is running: " + ngnixServer.isNginxRunning());
-           // ngnixServer.start();
-            System.out.println("Nginx is running: " + ngnixServer.isNginxRunning());
-            ngnixServer.stop();
-        } catch (ServiceException e) {
-            e.printStackTrace();
-        }
     }
 
 
