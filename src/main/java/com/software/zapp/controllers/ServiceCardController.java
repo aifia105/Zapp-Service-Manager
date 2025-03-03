@@ -35,8 +35,8 @@ public class ServiceCardController {
     @FXML
     public void initialize() {
         // Initialize with default configuration
-        serviceConfig = new ServiceInfo("Ngnix Server", "444", "C:/Users/moham/OneDrive/Desktop/zapptest");
-        ngnixServer = new NgnixServer(444, "C:/Users/moham/OneDrive/Desktop/zapptest");
+        serviceConfig = new ServiceInfo("Ngnix Server", "444", "C:/Users/moham/OneDrive/Documents/github/zapptest");
+        ngnixServer = new NgnixServer(444, "C:/Users/moham/OneDrive/Documents/github/zapptest");
 
         // Set the service initial status
         setServiceName(ngnixServer.getName());
@@ -51,7 +51,7 @@ public class ServiceCardController {
         return new ServiceInfo(
                 serviceName.getText(),
                 portText,
-                "C:/Users/moham/OneDrive/Desktop/zapptest"
+                "C:/Users/moham/OneDrive/Documents/github/zapptest"
 
         );
     }
